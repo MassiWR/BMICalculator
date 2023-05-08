@@ -34,12 +34,18 @@
             this.txtCmFt = new System.Windows.Forms.TextBox();
             this.txtInch = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblBMI = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblWeightCat = new System.Windows.Forms.Label();
+            this.grpUnit = new System.Windows.Forms.GroupBox();
+            this.rBtnMetric = new System.Windows.Forms.RadioButton();
+            this.rBtnImperial = new System.Windows.Forms.RadioButton();
+            this.grpResults = new System.Windows.Forms.GroupBox();
             this.lblNormalBMI = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblWeightCat = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblBMI = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.grpUnit.SuspendLayout();
+            this.grpResults.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -97,56 +103,59 @@
             this.btnOK.Text = "Calculate";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // grpUnit
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 283);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Your BMI";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            this.grpUnit.Controls.Add(this.rBtnImperial);
+            this.grpUnit.Controls.Add(this.rBtnMetric);
+            this.grpUnit.Location = new System.Drawing.Point(310, 34);
+            this.grpUnit.Name = "grpUnit";
+            this.grpUnit.Size = new System.Drawing.Size(263, 92);
+            this.grpUnit.TabIndex = 12;
+            this.grpUnit.TabStop = false;
+            this.grpUnit.Text = "Unit";
             // 
-            // lblBMI
+            // rBtnMetric
             // 
-            this.lblBMI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBMI.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBMI.Location = new System.Drawing.Point(190, 235);
-            this.lblBMI.Name = "lblBMI";
-            this.lblBMI.Size = new System.Drawing.Size(219, 23);
-            this.lblBMI.TabIndex = 7;
-            this.lblBMI.Text = "label3";
-            this.lblBMI.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rBtnMetric.AutoSize = true;
+            this.rBtnMetric.Location = new System.Drawing.Point(7, 22);
+            this.rBtnMetric.Name = "rBtnMetric";
+            this.rBtnMetric.Size = new System.Drawing.Size(111, 20);
+            this.rBtnMetric.TabIndex = 0;
+            this.rBtnMetric.TabStop = true;
+            this.rBtnMetric.Text = "Metric(kg, cm)";
+            this.rBtnMetric.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // rBtnImperial
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 283);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 23);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Weight Category";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.rBtnImperial.AutoSize = true;
+            this.rBtnImperial.Location = new System.Drawing.Point(7, 56);
+            this.rBtnImperial.Name = "rBtnImperial";
+            this.rBtnImperial.Size = new System.Drawing.Size(114, 20);
+            this.rBtnImperial.TabIndex = 1;
+            this.rBtnImperial.TabStop = true;
+            this.rBtnImperial.Text = "Imperial(ft, lbs)";
+            this.rBtnImperial.UseVisualStyleBackColor = true;
             // 
-            // lblWeightCat
+            // grpResults
             // 
-            this.lblWeightCat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblWeightCat.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeightCat.Location = new System.Drawing.Point(190, 283);
-            this.lblWeightCat.Name = "lblWeightCat";
-            this.lblWeightCat.Size = new System.Drawing.Size(219, 23);
-            this.lblWeightCat.TabIndex = 9;
-            this.lblWeightCat.Text = "label5";
-            this.lblWeightCat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.grpResults.Controls.Add(this.label3);
+            this.grpResults.Controls.Add(this.lblWeightCat);
+            this.grpResults.Controls.Add(this.label4);
+            this.grpResults.Controls.Add(this.lblBMI);
+            this.grpResults.Controls.Add(this.label2);
+            this.grpResults.Location = new System.Drawing.Point(35, 214);
+            this.grpResults.Name = "grpResults";
+            this.grpResults.Size = new System.Drawing.Size(584, 100);
+            this.grpResults.TabIndex = 13;
+            this.grpResults.TabStop = false;
+            this.grpResults.Text = "   Results for";
             // 
             // lblNormalBMI
             // 
             this.lblNormalBMI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNormalBMI.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNormalBMI.ForeColor = System.Drawing.Color.Green;
-            this.lblNormalBMI.Location = new System.Drawing.Point(190, 355);
+            this.lblNormalBMI.Location = new System.Drawing.Point(35, 392);
             this.lblNormalBMI.Name = "lblNormalBMI";
             this.lblNormalBMI.Size = new System.Drawing.Size(219, 23);
             this.lblNormalBMI.TabIndex = 10;
@@ -157,23 +166,62 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 239);
+            this.label3.Location = new System.Drawing.Point(107, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 23);
-            this.label3.TabIndex = 11;
+            this.label3.TabIndex = 16;
             this.label3.Text = "Your BMI";
+            // 
+            // lblWeightCat
+            // 
+            this.lblWeightCat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblWeightCat.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeightCat.Location = new System.Drawing.Point(262, 63);
+            this.lblWeightCat.Name = "lblWeightCat";
+            this.lblWeightCat.Size = new System.Drawing.Size(219, 23);
+            this.lblWeightCat.TabIndex = 15;
+            this.lblWeightCat.Text = "label5";
+            this.lblWeightCat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(107, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 23);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Weight Category";
+            // 
+            // lblBMI
+            // 
+            this.lblBMI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBMI.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBMI.Location = new System.Drawing.Point(262, 15);
+            this.lblBMI.Name = "lblBMI";
+            this.lblBMI.Size = new System.Drawing.Size(219, 23);
+            this.lblBMI.TabIndex = 13;
+            this.lblBMI.Text = "label3";
+            this.lblBMI.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(104, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 23);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Your BMI";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 638);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.grpResults);
+            this.Controls.Add(this.grpUnit);
             this.Controls.Add(this.lblNormalBMI);
-            this.Controls.Add(this.lblWeightCat);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblBMI);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtInch);
             this.Controls.Add(this.txtCmFt);
@@ -182,6 +230,10 @@
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "BMICalculator";
+            this.grpUnit.ResumeLayout(false);
+            this.grpUnit.PerformLayout();
+            this.grpResults.ResumeLayout(false);
+            this.grpResults.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,12 +247,16 @@
         private System.Windows.Forms.TextBox txtCmFt;
         private System.Windows.Forms.TextBox txtInch;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblBMI;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblWeightCat;
-        private System.Windows.Forms.Label lblNormalBMI;
+        private System.Windows.Forms.GroupBox grpUnit;
+        private System.Windows.Forms.RadioButton rBtnImperial;
+        private System.Windows.Forms.RadioButton rBtnMetric;
+        private System.Windows.Forms.GroupBox grpResults;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblWeightCat;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblBMI;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNormalBMI;
     }
 }
 

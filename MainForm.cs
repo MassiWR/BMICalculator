@@ -15,6 +15,17 @@ namespace BMICalculator
         public MainForm()
         {
             InitializeComponent();
+
+            // Begin my work
+
+            InitializeGUI();    
+        }
+
+        private void InitializeGUI() {
+            this.Text += "Massi Wararoodi";
+            lblBMI.Text = string.Empty;
+            lblWeightCat.Text = string.Empty;
+            lblNormalBMI.Text = string.Empty;
         }
 
         private void label1_Click(object sender, EventArgs e)
