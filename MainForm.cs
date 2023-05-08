@@ -26,6 +26,7 @@ namespace BMICalculator
             lblBMI.Text = string.Empty;
             lblWeightCat.Text = string.Empty;
             lblNormalBMI.Text = string.Empty;
+            rBtnMetric.Checked = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
